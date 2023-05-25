@@ -1,0 +1,50 @@
+<div class="container">
+
+    <p-card header="Creación de un libro en el sistema" subheader="">
+        <p-divider></p-divider>
+        
+        <div class="content-container">
+
+            <form name="bookCreate" #bookCreate="ngForm" (ngSubmit)="submit()">
+
+                <div class="form-container">
+
+                    <div class="form-item">
+                        <label htmlFor="title">Título</label>
+                        <input pInputText id="title" [(ngModel)]="book.title" name="title" required #title="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="reference">Referencia</label>
+                        <input pInputText id="reference" [(ngModel)]="book.reference" name="reference" required #reference="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="author">Autor</label>
+                        <input pInputText id="author" [(ngModel)]="book.author" name="author" #author="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="price">Precio</label>
+                        <input pInputText id="price" [(ngModel)]="book.price" name="price" required #price="ngModel" />
+                    </div>
+
+                    <div class="form-item">
+                        <label htmlFor="localtion">Ubicacion</label>
+                        <input pInputText id="localtion" [(ngModel)]="book.location" name="localtion" required #second_surname="ngModel" />
+                    </div>
+
+            
+
+                    <p-divider></p-divider>
+
+                    <p-button type="submit" [disabled]="!bookCreate.form.valid" styleClass="p-button-success" label="Enviar"></p-button>
+
+                </div>
+            </form>
+        </div>
+
+        
+    </p-card>
+
+</div>
